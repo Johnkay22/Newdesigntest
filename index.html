@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much You Make to Poop!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-spinner"></div>
+        <h1>Loading...</h1>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container" id="main-content">
+        <h1>How Much You Make to Poop!</h1>
+        <input type="number" id="salary" placeholder="Enter your annual salary">
+        <input type="number" id="hoursPerWeek" placeholder="Enter your weekly work hours">
+        <div id="result"></div>
+        <div id="poopEmoji">💩</div>
+        <div id="timer">00:00:00</div>
+        <button id="startStopButton">Start Poop</button>
+        <button id="statsButton">Show Stats</button>
+        <h2>Your Poop Log(s)</h2>
+        <div id="log">
+            <div id="logEntries"></div>
+        </div>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <!-- Modals -->
+    <div id="ratingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div id="congratsMessage"></div>
+            <h2>Rate Your Poop</h2>
+            <div class="poop-rating">
+                <button class="poop" data-rating="1">💩</button>
+                <button class="poop" data-rating="2">💩</button>
+                <button class="poop" data-rating="3">💩</button>
+                <button class="poop" data-rating="4">💩</button>
+                <button class="poop" data-rating="5">💩</button>
+            </div>
+            <input type="text" id="poopComment" placeholder="Add a comment (optional)">
+            <button id="submitRating">Submit Rating</button>
+        </div>
+    </div>
+
+    <div id="shareRatingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Share Your Poop Rating</h2>
+            <p id="shareRatingMessage"></p>
+            <div class="share-buttons">
+                <button id="shareRatingTwitter">Share on Twitter</button>
+                <button id="shareRatingFacebook">Share on Facebook</button>
+                <button id="shareRatingSMS">Share via SMS</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Your Poop Statistics</h2>
+            <canvas id="statsChart"></canvas>
+            <div id="statsText"></div>
+            <div class="social-share">
+                <button id="shareStatsTwitter">Share on Twitter</button>
+                <button id="shareStatsFacebook">Share on Facebook</button>
+                <button id="shareStatsSMS">Share via SMS</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Share Your Poop</h2>
+            <button id="shareEntryTwitter">Share on Twitter</button>
+            <button id="shareEntryFacebook">Share on Facebook</button>
+            <button id="shareEntrySMS">Share via SMS</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
