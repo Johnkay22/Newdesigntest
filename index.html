@@ -522,12 +522,12 @@
 
         function shareEntry(platform) {
             const session = currentUser.data.poopSessions[currentShareIndex];
-            const message = `I just had a ${session.rating}-💩 poop! Duration: ${formatTime(session.duration)}, Earnings: $${session.earnings.toFixed(2)}`;
+            const message = `I just had a ${session.rating}-💩 poop! Duration: ${formatTime(session.duration)}, Earnings: $${session.earnings.toFixed(2)}, Find out how much you make to poop at www.poopprofit.com!`;
             shareContent(platform, message);
         }
 
         function shareRating(platform) {
-            const message = `I just had a ${poopRating}-💩 poop and earned $${lastSessionEarnings.toFixed(2)}!`;
+            const message = `I just had a ${poopRating}-💩 poop and earned $${lastSessionEarnings.toFixed(2)}! Find out how much you make to poop at www.poopprofit.com!`;
             shareContent(platform, message);
         }
 
